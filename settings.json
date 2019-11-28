@@ -1,0 +1,5 @@
+{
+	"servicerestart":"service lighttpd restart",
+	"serviceget": "/usr/local/bin/pluginget",
+	"serviceset": "/usr/local/bin/pluginset",
+}
