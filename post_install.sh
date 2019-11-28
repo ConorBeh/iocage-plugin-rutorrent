@@ -24,7 +24,7 @@ git clone https://github.com/autodl-community/autodl-rutorrent.git autodl-irssi
 
 
 
-(crontab -l 2>/dev/null; echo "@reboot sh /root/torrenting.sh") | crontab -
+# (crontab -l 2>/dev/null; echo "@reboot sh /root/torrenting.sh") | crontab -
 
 screen -dmS screen_rtorrent rtorrent
 screen -S autodl -fa -d -m irssi
