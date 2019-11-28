@@ -3,6 +3,10 @@
     "plugin_schema": "2",
     "release": "11.3-RELEASE",
     "artifact": "https://github.com/RogerAirgood/iocage-plugin-osticket.git",
+    "properties": {
+        "vnet": 1,
+        "allow_raw_sockets": 1"
+    },
     "pkgs": [
 		"lighttpd",
 		"php73",
