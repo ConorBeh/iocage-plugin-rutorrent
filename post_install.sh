@@ -17,14 +17,12 @@ git clone https://github.com/Novik/ruTorrent.git rutorrent
 rm -r rutorrent/plugins
 svn checkout https://github.com/Novik/ruTorrent/trunk/plugins rutorrent/plugins
 
-chown -R www:www rutorrent
-chmod -R 755 rutorrent
 
 rm -rf plugins/autodl-irssi
 
 git clone https://github.com/autodl-community/autodl-rutorrent.git autodl-irssi 
 
-chown -R www:www-autodl-irssi
+
 
 (crontab -l 2>/dev/null; echo "@reboot sh /root/torrenting.sh") | crontab -
 
