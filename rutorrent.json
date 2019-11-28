@@ -45,7 +45,7 @@
 		"git",
 		"subversion",
 		"irssi",
-		"screen
+		"screen"
     ],
     "packagesite": "http://pkg.FreeBSD.org/FreeBSD:11:amd64/quarterly",
     "fingerprints": {
