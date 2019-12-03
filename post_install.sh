@@ -49,6 +49,8 @@ chmod +x /root/torrenting.sh
 touch .rtorrent.rc
 echo "scgi_port = 127.0.0.1:6000" > .rtorrent.rc
 
+chmod -R 777 /usr/local/www/rutorrent/share/torrents
+chmod -R 777 /usr/local/www/rutorrent/share/settings
 screen -dmS screen_rtorrent rtorrent
 screen -S autodl -fa -d -m irssi
 
