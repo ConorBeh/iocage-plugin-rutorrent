@@ -5,7 +5,7 @@ sysrc -f /etc/rc.conf php_fpm_enable="YES"
 service php-fpm start 2>/dev/null
 service lighttpd start 2>/dev/null
 
-
+mkdir /root/.autodl
 echo "[options]" >> /root/.autodl/autodl.cfg
 echo "rt-address = 127.0.0.1:6000" >> /root/.autodl/autodl.cfg
 echo "gui-server-port = 6002" >> /root/.autodl/autodl.cfg
