@@ -13,7 +13,7 @@ echo "gui-server-password = 3PicP4ssw0rd" >> /root/.autodl/autodl.cfg
 
 mkdir /root/rutorrent-stage
 mkdir /root/rutorrent-stage-2
-mkdir /roo/rutorrent-stage-3
+mkdir /root/rutorrent-stage-3
 
 git clone https://github.com/Novik/ruTorrent.git rutorrent-stage
 rm -r rutorrent-stage/plugins/
