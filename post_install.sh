@@ -46,6 +46,9 @@ cd
 chmod +x /root/torrenting.sh 
 (crontab -l 2>/dev/null; echo "@reboot sh /root/torrenting.sh") | crontab -
 
+touch .rtorrent.rc
+echo "scgi_port = 127.0.0.1:6000" > .rtorrent.rc
+
 screen -dmS screen_rtorrent rtorrent
 screen -S autodl -fa -d -m irssi
 
