@@ -43,8 +43,9 @@ unzip -o autodl-irssi-v2.6.1.zip
 cp autodl-irssi.pl autorun/
 
 cd
-chmod +x /root/torrenting.sh 
-(crontab -l 2>/dev/null; echo "@reboot sh /root/torrenting.sh") | crontab -
+
+(crontab -l 2>/dev/null; echo "@reboot screen -dmS screen_rtorrent rtorrent") | crontab -
+(crontab -l 2>/dev/null; echo "@reboot screen -S autodl -fa -d -m irssi") | crontab -
 
 touch .rtorrent.rc
 echo "scgi_port = 127.0.0.1:6000" > .rtorrent.rc
