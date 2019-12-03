@@ -15,6 +15,6 @@
  */
 
 $autodlPort = 6002;
-$autodlPassword = "gay";
+$autodlPassword = "3PicP4ssw0rd";
 
 ?>
