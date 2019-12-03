@@ -22,7 +22,7 @@ cp -rf rutorrent-stage/. /usr/local/www/rutorrent/
 svn checkout https://github.com/Novik/ruTorrent/trunk/plugins rutorrent-stage-3/plugins
 cp -rf rutorrent-stage-3/plugins /usr/local/www/rutorrent/
 
-rm -r /usr/local/www/rutorrent/autodl-irssi
+rm -r /usr/local/www/rutorrent/plugins/autodl-irssi
 
 
 
