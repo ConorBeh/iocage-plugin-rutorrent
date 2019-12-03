@@ -27,7 +27,8 @@ rm -r /usr/local/www/rutorrent/plugins/autodl-irssi
 
 
 git clone https://github.com/autodl-community/autodl-rutorrent.git rutorrent-stage-2
-cp -rf rutorrent-stage-2/autodl-irssi /usr/local/www/rutorrent/plugins/
+mkdir /usr/local/www/rutorrent/plugins/autodl-irssi 
+cp -rf rutorrent-stage-2/. /usr/local/www/rutorrent/plugins/autodl-irssi
 
 
 mkdir config-stage
