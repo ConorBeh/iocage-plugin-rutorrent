@@ -8,7 +8,7 @@ Here are a few things you need to know:
 
 2. There is a default password for autodl-irssi communcation, feel free to change this. 
 
-3. You will need to hardcode your IRC username in .irssi/config as the default is "root" and will get you insta banned on most IRC servers. You can do this with a text editor of your chosing. 
+3. You will need to hardcode your IRC username in .irssi/config as the default is "root" and will get you insta banned on most IRC servers. You can do this with a text editor of your chosing. autodl should use its own but it doesnt for some reason... could be a bug or my stupdity. 
 
 4. rtorrent and autodl are started via screen, a simple crontab @reboot entry does this. 
 
