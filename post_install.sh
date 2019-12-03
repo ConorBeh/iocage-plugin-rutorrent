@@ -27,3 +27,4 @@ git clone https://github.com/autodl-community/autodl-rutorrent.git autodl-irssi
 
 screen -dmS screen_rtorrent rtorrent
 screen -S autodl -fa -d -m irssi
+
