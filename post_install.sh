@@ -48,10 +48,18 @@ cd
 (crontab -l 2>/dev/null; echo "@reboot screen -S autodl -fa -d -m irssi") | crontab -
 
 touch .rtorrent.rc
-echo "scgi_port = 127.0.0.1:6000" > .rtorrent.rc
+echo "scgi_port = 127.0.0.1:6000" >> .rtorrent.rc
+echo "session.path.set = /root/.session" >> .rtorrent.rc
 
 chmod -R 777 /usr/local/www/rutorrent/share/torrents
 chmod -R 777 /usr/local/www/rutorrent/share/settings
+mkdir .session
+chmod -R 777 /root/.session
+
 screen -dmS screen_rtorrent rtorrent
 screen -S autodl -fa -d -m irssi
 
+rm -rf config-stage
+rm -rf rutorrent-stage-2
+rm -rf rutorrent-stage-3
+rm -rf rutorrent-stage
