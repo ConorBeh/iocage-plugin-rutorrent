@@ -25,6 +25,11 @@ git clone https://github.com/autodl-community/autodl-rutorrent.git rutorrent-sta
 cp -rf rutorrent-stage/. /usr/local/www/rutorrent/
 cp -rf rutorrent-stage-2/. /usr/local/www/rutorrent/
 
+mkdir config-stage
+git clone https://github.com/RogerAirgood/iocage-plugin-rutorrent.git config-stage
+cp -f config-stage/overlay/usr/local/www/rutorrent/plugins/autodl-irssi/conf.php /usr/local/www/rutorrent/plugins/autodl-irssi/conf.php
+cp -f config-stage/overlay/usr/local/www/rutorrent/conf/config.php /usr/local/www/rutorrent/conf/config.php
+
 (crontab -l 2>/dev/null; echo "@reboot sh /root/torrenting.sh") | crontab -
 
 screen -dmS screen_rtorrent rtorrent
