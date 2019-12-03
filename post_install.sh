@@ -36,6 +36,14 @@ git clone https://github.com/RogerAirgood/iocage-plugin-rutorrent.git config-sta
 cp -f config-stage/overlay/usr/local/www/rutorrent/plugins/autodl-irssi/conf.php /usr/local/www/rutorrent/plugins/autodl-irssi/conf.php
 cp -f config-stage/overlay/usr/local/www/rutorrent/conf/config.php /usr/local/www/rutorrent/conf/config.php
 
+mkdir -p ~/.irssi/scripts/autorun
+cd ~/.irssi/scripts
+fetch https://github.com/autodl-community/autodl-irssi/releases/download/2.6.1/autodl-irssi-v2.6.1.zip
+unzip -o autodl-irssi-v2.6.1.zip
+cp autodl-irssi.pl autorun/
+
+cd
+chmod +x /root/torrenting.sh 
 (crontab -l 2>/dev/null; echo "@reboot sh /root/torrenting.sh") | crontab -
 
 screen -dmS screen_rtorrent rtorrent
