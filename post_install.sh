@@ -14,8 +14,8 @@ echo "gui-server-password = 3PicP4ssw0rd" >> /root/.autodl/autodl.cfg
 mkdir /root/rutorrent-stage
 git clone https://github.com/Novik/ruTorrent.git rutorrent-stage
 rm -r rutorrent-stage/plugins
-svn checkout https://github.com/Novik/ruTorrent/trunk/plugins rutorrent-stage/plugins
-
+svn checkout https://github.com/Novik/ruTorrent/trunk/plugins rutorrent-stage-3/plugins
+cp -rf rutorrent-stage-3/plugins. /usr/local/www/rutorrent/plugins/
 
 
 rm -r rutorrent-stage/plugins/autodl-irssi
