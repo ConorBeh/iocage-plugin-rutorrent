@@ -11,7 +11,11 @@ mkdir /root/.autodl
 echo "[options]" >> /root/.autodl/autodl.cfg
 echo "rt-address = 127.0.0.1:6000" >> /root/.autodl/autodl.cfg
 echo "gui-server-port = 6002" >> /root/.autodl/autodl.cfg
-echo "gui-server-password = 3PicP4ssw0rd" >> /root/.autodl/autodl.cfg
+
+# Generate random password
+cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 16 | head -n 1 > /root/gui-password
+GUI-PASS='cat /root/gui-password'
+echo "gui-server-password = ${GUI-PASS}" >> /root/.autodl/autodl.cfg
 
 # Create staging directories 
 mkdir /root/rutorrent-stage
