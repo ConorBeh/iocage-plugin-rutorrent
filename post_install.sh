@@ -1,4 +1,5 @@
 #!/bin/sh
+
 # Enable and start the web server and php
 sysrc -f /etc/rc.conf lighttpd_enable="YES"
 sysrc -f /etc/rc.conf php_fpm_enable="YES"
