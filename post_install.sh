@@ -23,7 +23,7 @@ git clone https://github.com/Novik/ruTorrent.git rutorrent-stage
 rm -r rutorrent-stage/plugins/
 cp -rf rutorrent-stage/. /usr/local/www/rutorrent/
 
-# Why am I using svn and git you may ask? I dont know. Grabs the newest plugins and puts them in the rutorrent plugins folder.
+# Grabs the newest plugins and puts them in the rutorrent plugins folder.
 git clone https://github.com/Novik/ruTorrent/trunk/plugins rutorrent-stage-2/plugins
 cp -rf rutorrent-stage-2/plugins /usr/local/www/rutorrent/
 
