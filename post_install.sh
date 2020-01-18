@@ -12,7 +12,7 @@ echo "rt-address = 127.0.0.1:6000" >> /root/.autodl/autodl.cfg
 echo "gui-server-port = 6002" >> /root/.autodl/autodl.cfg
 echo "gui-server-password = 3PicP4ssw0rd" >> /root/.autodl/autodl.cfg
 
-# Create staging directories (yes I know they're out of order, that's a 3am shell scripting mistake)
+# Create staging directories 
 mkdir /root/rutorrent-stage
 mkdir /root/rutorrent-stage-2
 mkdir /root/rutorrent-stage-3
