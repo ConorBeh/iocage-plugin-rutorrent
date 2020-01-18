@@ -23,18 +23,18 @@ rm -r rutorrent-stage/plugins/
 cp -rf rutorrent-stage/. /usr/local/www/rutorrent/
 
 # Why am I using svn and git you may ask? I dont know. Grabs the newest plugins and puts them in the rutorrent plugins folder.
-svn checkout https://github.com/Novik/ruTorrent/trunk/plugins rutorrent-stage-3/plugins
-cp -rf rutorrent-stage-3/plugins /usr/local/www/rutorrent/
+git clone https://github.com/Novik/ruTorrent/trunk/plugins rutorrent-stage-2/plugins
+cp -rf rutorrent-stage-2/plugins /usr/local/www/rutorrent/
 
 # Dump the stock autodl-irssi plugin as we are grabbing the newest version
 rm -r /usr/local/www/rutorrent/plugins/autodl-irssi
 
 # Grab the autodl rutorrent plugin and put it in the rutorrent plugin directory
-git clone https://github.com/autodl-community/autodl-rutorrent.git rutorrent-stage-2
+git clone https://github.com/autodl-community/autodl-rutorrent.git rutorrent-stage-3
 mkdir /usr/local/www/rutorrent/plugins/autodl-irssi 
-cp -rf rutorrent-stage-2/. /usr/local/www/rutorrent/plugins/autodl-irssi
+cp -rf rutorrent-stage-3/. /usr/local/www/rutorrent/plugins/autodl-irssi
 
-# Stage some configs and put them in their place from overlay, yes I know this is improper. 
+# Stage some configs and put them in their place from overlay. They are overwritten so copying them manually ensures they are there. 
 mkdir config-stage
 git clone https://github.com/RogerAirgood/iocage-plugin-rutorrent.git config-stage
 cp -f config-stage/overlay/usr/local/www/rutorrent/plugins/autodl-irssi/conf.php /usr/local/www/rutorrent/plugins/autodl-irssi/conf.php
@@ -59,7 +59,7 @@ touch .rtorrent.rc
 echo "scgi_port = 127.0.0.1:6000" >> .rtorrent.rc
 echo "session.path.set = /root/.session" >> .rtorrent.rc
 
-# Permissions on the stock torrents directory and the settings directory. Yes yes 777 bad.
+# Permissions on the stock torrents directory and the settings directory. 
 chmod -R 777 /usr/local/www/rutorrent/share/torrents
 chmod -R 777 /usr/local/www/rutorrent/share/settings
 mkdir .session
@@ -69,8 +69,10 @@ chmod -R 777 /root/.session
 screen -dmS screen_rtorrent rtorrent
 screen -S autodl -fa -d -m irssi
 
-# Nuke stagind directories 
+# Nuke staging directories 
 rm -rf config-stage
+rm -rf rutorrent-stage
 rm -rf rutorrent-stage-2
 rm -rf rutorrent-stage-3
-rm -rf rutorrent-stage
+
+exit
